@@ -1,5 +1,29 @@
 # University
+<h1>Decorator OutPut</h1>
+<ul>
+  <li>  Circle with normal border:</li>
+   <li>Shape: Circle</li>
+    <li>Total cost: 10.0</li>
+     <li>Circle with red border:</li>
+      <li>Shape: Circle</li>
+       <li><b>Border Color: Red</b></li>
+        <li>Total cost: 15.0</li>
+          <li>Total cost: 15.0</li>
+          <li><b>Rectangle with red border:</b></li>
+           <li>Shape: Rectangle</li>
+            <li>Border Color: Red</li>
 
+             <li>Total cost: 20.0</li>
+              <li>Total cost: 20.0</li>
+
+
+
+
+
+
+
+
+</ul>
 <h2>File decorator Output</h2>
 
 <ul>
