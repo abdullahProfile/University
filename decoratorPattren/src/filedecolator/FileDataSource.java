@@ -10,9 +10,6 @@ package filedecolator;
  * @author sp23-bse-116
  */
 
-
-package filedecolator;
-
 import java.io.*;
 
 public class FileDataSource implements DataSource {
