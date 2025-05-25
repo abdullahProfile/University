@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AbdullahTec Clothing Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product {
+            flex: 1 1 calc(25% - 20px);
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+        }
+        .product-details {
+            padding: 15px;
+        }
+        .product-details h2 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .product-details p {
+            margin: 10px 0;
+            color: #666;
+        }
+        .product-details .price {
+            color: #E91E63;
+            font-size: 1.2em;
+        }
+        .add-to-cart {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background: #E91E63;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 0 0 10px 10px;
+            transition: background 0.3s;
+        }
+        .add-to-cart:hover {
+            background: #d81b60;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .cart {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        .cart-header {
+            background: #E91E63;
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+        }
+        .cart-items {
+            padding: 10px;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .cart-item p {
+            margin: 0;
+        }
+        .cart-total {
+            text-align: right;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+        .cart-toggle {
+            cursor: pointer;
+            background: #E91E63;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to AbdullahTec Clothing Store</h1>
+        <button class="cart-toggle">View Cart</button>
+    </header>
+    <div class="container">
+        <div class="products">
+            <!-- Product blocks with real images -->
+            <div class="product" data-name="Stylish Jacket" data-price="49.99">
+                <img src="https://source.unsplash.com/300x400/?jacket" alt="Stylish Jacket">
+                <div class="product-details">
+                    <h2>Stylish Jacket</h2>
+                    <p>High-quality jacket perfect for all occasions.</p>
+                    <p class="price">$49.99</p>
+                </div>
+                <a href="#" class="add-to-cart">Add to Cart</a>
+            </div>
+            <div class="product" data-name="Classic T-Shirt" data-price="19.99">
+                <img src="https://source.unsplash.com/300x400/?tshirt" alt="Classic T-Shirt">
+                <div class="product-details">
+                    <h2>Classic T-Shirt</h2>
+                    <p>Comfortable and stylish t-shirt available in various colors.</p>
+                    <p class="price">$19.99</p>
+                </div>
+                <a href="#" class="add-to-cart">Add to Cart</a>
+            </div>
+            <div class="product" data-name="Denim Jeans" data-price="39.99">
+                <img src="https://source.unsplash.com/300x400/?jeans" alt="Denim Jeans">
+                <div class="product-details">
+                    <h2>Denim Jeans</h2>
+                    <p>Durable and trendy denim jeans for everyday wear.</p>
+                    <p class="price">$39.99</p>
+                </div>
+                <a href="#" class="add-to-cart">Add to Cart</a>
+            </div>
+            <div class="product" data-name="Leather Boots" data-price="69.99">
+                <img src="https://source.unsplash.com/300x400/?boots" alt="Leather Boots">
+                <div class="product-details">
+                    <h2>Leather Boots</h2>
+                    <p>High-quality leather boots that combine style and comfort.</p>
+                    <p class="price">$69.99</p>
+                </div>
+                <a href="#" class="add-to-cart">Add to Cart</a>
+            </div>
+            <div class="product" data-name="Summer Dress" data-price="29.99">
+                <img src="https://source.unsplash.com/300x400/?summer,dress" alt="Summer Dress">
+                <div class="product-details">
+                    <h2>Summer Dress</h2>
+                    <p>Light and breezy summer dress perfect for warm days.</p>
+                    <p class="price">$29.99</p>
+                </div>
+                <a href="#" class="add-to-cart">Add to Cart</a>
+            </div>
+            <div class="product" data-name="Casual Sneakers" data-price="59.99">
+                <img src="https://source.unsplash.com/300x400/?sneakers" alt="Casual Sneakers">
+                <div class="product-details">
+                    <h2>Casual Sneakers</h2>
+                    <p>Comfortable sneakers suitable for all-day wear.</p>
+                    <p class="price">$59.99</p>
+                </div>
+                <a href="#" class="add-to-cart">Add to Cart</a>
+            </div>
+            <div class="product" data-name="Formal Shirt" data-price="34.99">
+                <img src="https://source.unsplash.com/300x400/?shirt" alt="Formal Shirt">
+                <div class="product-details">
+                    <h2>Formal Shirt</h2>
+                    <p>Elegant formal shirt perfect for office or special occasions.</p>
+                    <p class="price">$34.99</p>
+                </div>
+                <a href="#" class="add-to-cart">Add to Cart</a>
+            </div>
+            <div class="product" data-name="Chino Pants" data-price="44.99">
+                <img src="https://source.unsplash.com/300x400/?pants" alt="Chino Pants">
+                <div class="product-details">
+                    <h2>Chino Pants</h2>
+                    <p>Stylish and comfortable chino pants for a smart casual look.</p>
+                    <p class="price">$44.99</p>
+                </div>
+                <a href="#" class="add-to-cart">Add to Cart</a>
+            </div>
+            <div class="product" data-name="Winter Coat" data-price="99.99">
+                <img src="https://source.unsplash.com/300x400/?coat" alt="Winter Coat">
+                <div class="product-details">
+                    <h2>Winter Coat</h2>
+                    <p>Warm and stylish coat to keep you cozy during winter.</p>
+                    <p class="price">$99.99</p>
+                </div>
+                <a href="#" class="add-to-cart">Add to Cart</a>
+            </div>
+            <div class="product" data-name="Running Shorts" data-price="24.99">
+                <img src="https://source.unsplash.com/300x400/?shorts" alt="Running Shorts">
+                <div class="product-details">
+                    <h2>Running Shorts</h2>
+                    <p>Lightweight and breathable shorts for running and workouts</p>
