@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM learing</title>
+
+  <style>
+    form {
+      padding: 20px;
+      border: 2px solid gray;
+      max-width: 200px;
+      border-radius: 20px;
+      background: #fff;
+      margin-inline: auto;
+      margin-top: 50px;
+
+      input {
+        padding: 10px;
+        border-radius: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <form>
+   Name: <input type="text"  id="name"> <br>
+   password: <input type="password"  id="password"> <br>
+    <input type="button" value="login" id="btn" onclick="fun(form)">
+    <button onclick="fpassowrd(form)">forgott password</button>
+  </form>
+
+  <script>
+    let str="";
+    function fun(form) {
+
+        const name = document.getElementById("name").value;
+        const password = document.getElementById("password").value;
+        str +="Name"+name +"password"+password;
+    }
+
+    function fpassowrd(f1) {
+     var name= document.getElementById("name").value;
+     var password=document.getElementById("passwrod").value;
+
+     console.log("enter New passowrd");
+     srt="null";
+
+     srt +="Name"+name +"password"+password;
+
+     alert("password change succesffuluy");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+<style>
+
+  form{
+    padding: 15px;
+    border: 2px solid gray;
+    max-width: 200px;
+    margin-inline: auto;
+    background-color: gray;
+  }
+
+  form input:focus {
+    background-color: gray;
+  }
+
+</style>
+</head>
+<body>
+  <form>
+    Name: <input type="text" name="text1"> <br>
+    Password: <input type="password" name="text2"><br>
+    <input type="button" value="ok" onclick="fun(form)">
+  </form>
+
+  <script>
+
+function fun(f1){
+      var x = f1.elements.length-1;
+      var str = "";
+      for (var i = 0; i < x; i++) {
+        str += "Value at " + f1.elements[i].name + " is " + f1.elements[i].value + "<br>";
+      }
+      alert(str);
+    }
+  </script>
+</body>
+</html>

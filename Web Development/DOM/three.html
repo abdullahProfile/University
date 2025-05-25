@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check box</title>
+</head>
+<body>
+  <form>
+    <input type="checkbox" name="react" value="250"> ReactJS(250)</checbox><br>
+    <input type="checkbox" name="java" value="1000"> Java(1000)</checbox><br>
+    <input type="checkbox" name="chk" value="1300"> OOP(1300)</checbox><br>
+    <input type="checkbox" name="chk" value="12"> PF(12)</checbox><br>
+    <input type="button" value="orderNow" onclick="fun(form)"><br>
+    <input type="text" name="result" id="result">
+  </form>
+
+  <script>
+    function fun(f1) {
+      var sum = 0;
+      var str = "";
+
+      for (let i = 0; i < f1.elements.length; i++) {
+        if (f1.elements[i].type === 'checkbox' && f1.elements[i].checked) {
+          sum += parseInt(f1.elements[i].value);
+          str += f1.elements[i].name + " ";
+        }
+      }
+
+      var result=" Sum: " + sum + "Name: " +str;
+      document.getElementById("result").value=result;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>add Text to div</title>
+</head>
+<body>
+  <input type="text"  id="text" placeholder="Enter Text">
+  <button id="btn" onclick="fun()">add text</button>
+  <div id="addText"></div>
+
+  <script>
+    function fun() {
+      var text=document.getElementById("text").value;
+
+      if(text) {
+        var p=document.createElement("p");
+
+        p.innerText=text;
+        p.style.color="blue";
+        document.getElementById("addText").appendChild(p);
+        document.getElementById("text").value='';
+      } else {
+        document.getElementById("text").value="Enter text please";
+      }
+
+    }
+  </script>
+</body>
+</html>

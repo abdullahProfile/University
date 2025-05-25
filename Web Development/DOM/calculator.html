@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+
+  <style>
+    .container {
+      max-width: 200px;
+      border: 1px solid;
+      padding: 10px;
+      border-radius: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      background-color: black;
+      margin-inline: auto;
+      margin-top: 50px;
+      gap: 2px;
+      box-shadow: 0 3px 3px 1px rgb(97, 96, 94);
+
+      button {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-color: rgb(37, 37, 37);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: 0;
+      }
+
+      input {
+        border: 0;
+        width: 100%;
+        text-align: right;
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: black;
+      }
+
+      .btn {
+        background-color: rgb(147, 119, 34);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <input type="text" id="result" readonly>
+    <button class="num" onclick="appendNumber(1)">1</button>
+    <button class="num" onclick="appendNumber(2)">2</button>
+    <button class="num" onclick="appendNumber(3)">3</button>
+    <button class="btn" onclick="add()">+</button>
+    <button class="num" onclick="appendNumber(4)">4</button>
+
+    <button class="num" onclick="appendNumber(5)">5</button>
+    <button class="num" onclick="appendNumber(6)">6</button>
+    <button class="btn" onclick="subt()">-</button>
+    <button class="num" onclick="appendNumber(7)">7</button>
+
+    <button class="num" onclick="appendNumber(8)">8</button>
+
+    <button class="num" onclick="appendNumber(9)">9</button>
+    <button class="btn" onclick="mul()">x</button>
+
+    <button class="num btn" onclick="appendNumber(0)">0</button>
+
+    <button class="btn" onclick="div()">/</button>
+    <button class="btn" onclick="clearf()">clear</button>
+    <button class="btn" onclick="result()">=</button>
+  </div>
+
+  <script>
+
+    let currentNum=" ";
+    let firstNum=null;
+    let oparator=null;
+    let total=null;
+
+    function appendNumber(number) {
+      currentNum +=number;
+      document.getElementById("result").value=currentNum;
+    }
+
+    function add() {
+
+        if(firstNum === null) {
+          firstNum=parseInt(currentNum);
+          oparator="+";
+          currentNum=" ";
+          document.getElementById("result").value = "";
+        } else {
+
+          let secondNum=parseInt(currentNum);
+
+          if(!isNaN(firstNum) && !isNaN(secondNum)){
+             total=firstNum+secondNum;
+            document.getElementById("result").value=total;
+            firstNum=total;
+          } else {
+            document.getElementById("result").value="Error";
+          }
+        }
+        currentNum=" ";
+    }
+
+    function subt(){
+        if(firstNum === null) {
+          firstNum=parseInt(currentNum);
+          oparator="-";
+          currentNum=" ";
+          document.getElementById("result").value = "";
+        } else {
+
+          let secondNum=parseInt(currentNum);
+
+          if(!isNaN(firstNum) && !isNaN(secondNum)){
+            total=firstNum-secondNum;
+            document.getElementById("result").value=total;
+            firstNum=total;
+          } else {
+            document.getElementById("result").value="Error";
+          }
+        }
+        currentNum=" ";
+    }
+
+    function mul(){
+        if(firstNum === null) {
+          firstNum=parseInt(currentNum);
+          oparator="*";
+          currentNum=" ";
+          document.getElementById("result").value = "";
+        } else {
+
+          let secondNum=parseInt(currentNum);
+
+          if(!isNaN(firstNum) && !isNaN(secondNum)){
+             total=firstNum*secondNum;
+
+            document.getElementById("result").value=total;
+            firstNum=total;
+          } else {
+            document.getElementById("result").value="Error";
+          }
+        }
+        currentNum=" ";
+    }
+
+    function div(){
+        if(firstNum === null) {
+          firstNum=parseInt(currentNum);
+          oparator="/";
+          currentNum=" ";
+          document.getElementById("result").value = "";
+        } else {
+
+          let secondNum=parseInt(currentNum);
+
+          if(!isNaN(firstNum) && !isNaN(secondNum)){
+            if(secondNum !=0) {
+              total=firstNum/secondNum;
+
+            document.getElementById("result").value=total;
+              firstNum=total;
+            } else {
+              document.getElementById("result").value="Error";
+            }
+          }
+        }
+        currentNum=" ";
+    }
+      function clearf(){
+        document.getElementById("result").value=" ";
+        firstNum=null;
+        currentNum="";
+      }
+
+      function result() {
+
+      let secondNum=parseInt(currentNum);
+
+      if(oparator ==="+") {
+        total=firstNum + secondNum;
+      }
+      else if(oparator === "-") {
+        total=firstNum-secondNum;
+      } else if (oparator=== "*") {
+        total=firstNum * secondNum;
+      } else if (oparator === "/"){
+          if(secondNum !=0) {
+            total=firstNum / secondNum;
+          } else {
+            document.getElementById("result").value="Error";
+            return;
+          }
+      }
+
+      if (!isNaN(total)) {
+        document.getElementById("result").value = total;
+        firstNum = total;
+        currentNum = "";
+      }  else {
+        document.getElementById("result").value = "Error";
+      }
+}
+  </script>
+</body>
+</html>
