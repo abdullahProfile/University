@@ -7,7 +7,7 @@
   <p>The repository covers practical work from the following subjects:</p>
 
   <p><strong>1. Programming Fundamentals</strong><br>
-  Basic programming concepts using languages like C and C++. Includes practice problems, logic building, and foundational assignments.</p>
+  Basic programming concepts using languages like C. Includes practice problems, logic building, and foundational assignments.</p>
 
   <p><strong>2. Object-Oriented Programming with Java</strong><br>
   Java-based projects and exercises focusing on OOP principles such as classes, inheritance, polymorphism, and file handling.</p>
