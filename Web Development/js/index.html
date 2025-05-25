@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>JS Practice</title>
+</head>
+<body>
+  <h1>Let get started Js</h1>
+
+  <button id="btn" onclick="btnfun()" style="background-color:black; color: #fff; padding: 10px 15px; cursor: pointer;">Click me</button>
+
+  <form action="#">
+    <input type="text" id="name" placeholder="Enter User Name">
+    <input type="password" id="password" placeholder="Enter Password">
+    <input type="button" value="Submit" onclick="handelform()">
+    <p id="text"></p>
+  </form>
+
+  <div>
+    <h1>Order Your Food</h1>
+
+    <label for="food">Select Food:</label>
+    <select id="food">
+      <option value="400">Pizza</option>
+      <option value="500">Burger</option>
+    </select>
+
+    <br><br>
+
+    <label for="quantity">Enter Quantity:</label>
+    <input type="text" id="quantity" />
+
+    <br><br>
+
+    <label for="bill">Total Bill:</label>
+    <input type="text" id="bill" readonly />
+
+    <br><br>
+
+    <button onclick="calculateBill()">Calculate Total</button>
+  </div>
+
+  <div class="container">
+    <input type="text" id="number" placeholder="Enter Number">
+    <input type="checkbox" id="square">Square
+    <input type="checkbox" id="cub">Cube
+    <input type="text" id="result" placeholder="Result" readonly>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
