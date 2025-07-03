@@ -28,3 +28,6 @@
   <h2>Author</h2>
 
   <p>Created and maintained by Abdullah, a Software Engineering student at COMSATS Abbottabad.</p>
+
+<a href="https://www.linkedin.com/in/muhammad-abdullah-941546264/" target="_blank">Connect with me on LinkedIn</a>
+
