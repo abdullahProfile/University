@@ -1,12 +1,10 @@
+mport java.util.List;
 import java.util.Scanner;
+
 public class MainApp {
     public static void main(String[] args) {
-        // Choose the storage type
-LibraryStorage storage = new FileLibraryStorage();
-
-        // You can also use: LibraryStorage storage = new FileLibraryStorage();
-
-        Logger logger = new ConsoleLogger();
+        LibraryStorage storage = new FileLibraryStorage(); // or use new InMemoryLibraryStorage();
+        Logger logger = new LoggerComponent(); // or use new ConsoleLogger();
         LibraryService library = new LibraryComponent(storage, logger);
 
         Scanner scanner = new Scanner(System.in);

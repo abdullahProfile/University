@@ -11,6 +11,10 @@ public class Book {
         return title;
     }
 
+    public String getAuthor() {
+        return author;
+    }
+
     public String getDetails() {
         return title + " by " + author;
     }
