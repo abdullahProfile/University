@@ -21,7 +21,7 @@
   <p><strong>5. Software Design and Architecture</strong><br>
   Code and exercises related to software architecture principles, design patterns, and project structuring practices.</p>
 
- <p> <strong>Computer Networks <br></strong>
+ <p> <strong>6. Computer Networks <br></strong>
   Networking concepts and practical implementations of protocols, client-server models, and network security principles.</p>
   
   <h2>Purpose</h2>
