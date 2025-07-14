@@ -21,6 +21,9 @@
   <p><strong>5. Software Design and Architecture</strong><br>
   Code and exercises related to software architecture principles, design patterns, and project structuring practices.</p>
 
+ <p> <strong>Computer Networks <br></strong>
+  Networking concepts and practical implementations of protocols, client-server models, and network security principles.</p>
+  
   <h2>Purpose</h2>
 
   <p>The main purpose of this repository is to organize and preserve the programming work done throughout my university journey. It serves as a personal portfolio of practical coding skills developed over time.</p>
