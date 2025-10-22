@@ -1,4 +1,0 @@
-ecommerce,1
-studentApp,abdullah
-app,rana
-rana,e-commerce

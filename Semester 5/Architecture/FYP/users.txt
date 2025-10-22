@@ -1,0 +1,9 @@
+student,1,
+student,1,1234
+student,abdullah,1234
+supervisor,khan,123
+student,malik,1234
+supervisor,aizaz,1234
+student,khani,1234
+groupleader,rana,1234
+supervisor,mustafa,1234
